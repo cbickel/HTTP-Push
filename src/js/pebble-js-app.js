@@ -34,7 +34,7 @@ function sendHttpRequest(ToUrl,withJson,folderIndex,rowIndex,method) {
     // Have to to XMLHttpRequest because we dont have jquery :(
     // Testing was done via jquery ajax so results MAY be different
     // Particularly the request content-type (json vs form)
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.setRequestHeader("Content-Type", "application/json");
     var parameterizedUrl = Object.keys(strToJson).map(function(k) {
       return encodeURIComponent(k) + '=' + encodeURIComponent(strToJson[k])
     }).join('&');
